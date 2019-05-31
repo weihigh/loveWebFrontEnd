@@ -1,0 +1,8 @@
+float	浮动
+display	显示方式
+block	块级元素
+inline	行内元素
+line	行
+position	定位
+absolute	绝对的
+relative	相对的
