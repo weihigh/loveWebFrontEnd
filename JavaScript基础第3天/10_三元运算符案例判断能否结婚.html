@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 用户先输入自己的性别，然后输入自己的年龄，判断能否结婚
+		var sex = prompt("请输入性别");
+		var age = parseInt(prompt("请输入年龄"));
+
+		// 现在计算年龄下限
+		var zuidi = sex == "男" ? 22 : 20;
+
+		// 一个楼，统一的和最低线比：
+		if(age >= zuidi){
+			alert("能结婚");
+		}else{
+			alert("不能结婚");
+		}
+	</script>
+</body>
+</html>

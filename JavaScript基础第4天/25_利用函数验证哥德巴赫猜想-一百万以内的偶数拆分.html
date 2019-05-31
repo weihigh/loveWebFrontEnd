@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//将4~1000000的所有偶数拆分为两个质数的和
+		//只要拆一个结果就行了，比如48有多种拆法，只需要拆一种，就行了
+		//约数个数函数：能够传入一个数字，吐出来它约数的个数
+		function yueshugeshu(a){
+			
+
+			//计算a这个数字约数的个数
+			var count = 0;
+			for(var i = 1 ; i <= a ; i++){
+				if(a % i == 0){
+					count++;
+				}
+			}
+			return count;	//返回这个数字的约数的个数
+		}
+
+		//判断是否是质数，如果一个函数的名字取is
+		//就暗示了将返回布尔值，要么是true要么是false。是通常做法，不是规定
+		//接收一个参数m，返回是否是质数t或者f
+		function isZhishu(m){
+
+			if(yueshugeshu(m) == 2){
+				return true;
+			}else{
+				return false;
+			}
+		}
+
+		//注意验证，验证偶数能否被拆成两个质数
+		waiceng :
+		for(var i = 4 ; i <= 1000000 ; i+=2){
+			for(var j = 2 ; j < i ; j++){
+				if(isZhishu(j) && isZhishu(i - j)){
+					console.log(i + "可以拆分为" +  j + "与" +  (i - j) +  "的和");
+					continue waiceng;
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//用户输入一个数字，然后再输入一个数字，判断两者的奇偶性是否相同
+		//第一步，用户输入两个数字
+		var a = parseInt(prompt("请输入第1个数字"));
+		var b = parseInt(prompt("请输入第2个数字"));
+
+		//第二步，判断奇数偶数
+		//if(都是偶 || 都是奇)
+		// if(a % 2 == 0 && b % 2 == 0 || a % 2 != 0 && b % 2 != 0){
+		// 	alert("这两个数字的奇偶性相同");
+		// }else{
+		// 	alert("这两个数字的奇偶性不同");
+		// }
+
+
+		// ==========我是华丽丽的分割线===============
+		// 方法2，利用了数学的一个性质，两个数字如果除以2的余数相同，那么必然同奇同偶
+		// if(a % 2 == b % 2){
+		// 	alert("这两个数字的奇偶性相同");
+		// }else{
+		// 	alert("这两个数字的奇偶性不同");
+		// }
+
+		// ==========我是华丽丽的分割线===============
+		// 方法3，求和两个数字相加，如果得到偶数，那么这两个数字同奇同偶
+		if((a + b) % 2 == 0){
+			alert("这两个数字的奇偶性相同");
+		}else{
+			alert("这两个数字的奇偶性不同");
+		}
+	</script>
+</body>
+</html>

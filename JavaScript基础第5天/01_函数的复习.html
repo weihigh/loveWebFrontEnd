@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// function fn(){
+		// 	console.log(1);
+		// 	console.log(2);
+		// 	console.log(3);
+		// }
+
+		// console.log(0);
+		// fn();
+		// console.log(4);
+		// console.log(5);
+
+		//函数的参数和返回值
+		// function sum(a,b){
+		// 	return a + b;
+		// 	alert("哈哈，你永远看不见我，我在return后面");
+		// }
+
+		// //矮化为表达式了
+		// console.log(sum(1,"2",3,4,5));
+
+
+		//函数表达式，function没有名字，匿名函数。变量sum只是匿名函数的一个引用
+		//sum并不是函数的名字
+		// var sum = function(a,b){
+		// 	return a + b;
+		// }
+		// console.log(sum(1,2));
+
+		// //函数声明头的提升
+		// fn();		//正常会弹窗，把调用写在前面，因为函数声明头会预解析。
+		// fn2();		//报错。函数表达式是不能预解析的
+		// function fn(){
+		// 	alert("我是函数");
+		// }
+
+		// //函数表达式是不能预解析的
+		// var fn2 = function(){
+		// 	alert("我是函数2");
+		// }
+
+
+		// a();
+		// var a = 1;
+		// function a(){
+		// 	alert("我是函数");
+		// }
+
+
+		// var a = 1;
+		// function a(){
+		// 	alert("我是函数");
+		// }
+		// a();		//报错
+
+
+		// a();
+		// var a = 1;
+		// var a = function(){
+		// 	alert("我是函数");
+		// }
+
+		var a = 1;
+		var a = function(){
+			alert("我是函数");
+		}
+		a();
+	</script>
+</body>
+</html>

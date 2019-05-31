@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// //先调用
+		// fun();	//可以弹出警告框，因为函数有函数声明头提升的特性
+		// //然后定义
+		// function fun(){
+		// 	alert("我是函数，我执行了！");
+		// }
+
+		// ************************************
+		// 函数表达式不会有提升的
+		// fun();  //报错
+		// var fun = function(){
+		// 	alert("我是函数，我执行了！");
+		// }
+
+
+
+		//***************************************
+		//函数优先
+
+		// aaa();	//现在这个aaa到底是函数，还是变量5呢？
+		// 		    //函数优先，遇见同名标识符，预解析阶段一定把这个标识符给函数
+		
+		// var aaa = 5;		//定义一个变量，是5
+
+		// function aaa(){
+		// 	  alert("我是aaa函数，我执行了");
+		// }
+ 
+
+		//***************
+		// //函数优先
+		// foo();	//函数优先
+		
+		// var foo;
+
+		// function foo(){
+		// 	  alert(1);
+		// }
+
+		// foo = function(){
+		// 	  alert(2);
+		// }
+		
+	</script>
+</body>
+</html>

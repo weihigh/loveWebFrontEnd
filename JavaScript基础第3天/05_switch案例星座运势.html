@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//星座，弹出今日运势
+		//用户输入
+		var xingzuo = prompt("请输入你的星座");
+
+		switch(xingzuo){
+			case "白羊座" :
+				alert("今天要注意调整自己的状态，有些人的睡眠质量比较差");
+				break;
+			case "金牛座":
+				alert("今天会在感情方面遇到一些小小的问题");
+				break;
+			case "双子座":
+				alert("今天会在感情方面遇到一些小小的问题");
+				break;
+			case "巨蟹座":
+				alert("工作上要打醒十二分精神，要不然很大可能会经常要返工哦");
+				break;
+			case "狮子座":
+				alert("恋爱中的人今天的心有点摇摆不定，有人可能会有精神上的出轨");
+				break;
+			default :
+				alert("对不起，我们没有收录你的星座运势！");
+				break;
+		}
+		alert("播报完毕，给钱！");
+		
+		// 完全等价于：
+		// if(xingzuo == "白羊座"){
+		// 	alert("今天要注意调整自己的状态，有些人的睡眠质量比较差");
+		// }else if(xingzuo == "金牛座"){
+		// 	alert("今天会在感情方面遇到一些小小的问题");
+		// }else if(xingzuo == "双子座"){
+		// 	alert("要做好心理准备会在工作上被他人挑剔找茬，这是你避免不了的事情");
+		// }else if(xingzuo == "巨蟹座"){
+		// 	alert("工作上要打醒十二分精神，要不然很大可能会经常要返工哦");
+		// }else if(xingzuo == "狮子座"){
+		// 	alert("恋爱中的人今天的心有点摇摆不定，有人可能会有精神上的出轨");
+		// }else{
+		// 	alert("对不起，我们没有收录你的星座运势！");
+		// }
+
+		//alert("播报完毕，给钱！");
+	</script>
+</body>
+</html>

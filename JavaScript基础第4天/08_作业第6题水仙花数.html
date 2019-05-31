@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*水仙花数是一种特殊的五位数，它的特点就是，每个数位的5次方和，等于它本身。
+10000~99999之内，水仙花数，请编程找出来。*/
+	
+		//壳子1000~9999
+		for(var i = 10000 ; i <= 99999 ; i++){
+			//拆位，拆5位
+			var gewei = i % 10;
+			var shiwei = parseInt(i / 10) % 10;
+			var baiwei = parseInt(i / 100) % 10;
+			var qianwei = parseInt(i / 1000) % 10;
+			var wanwei = parseInt(i / 10000);
+			//算5次方
+			var a = Math.pow(gewei,5);
+			var b = Math.pow(shiwei,5);
+			var c = Math.pow(baiwei,5);
+			var d = Math.pow(qianwei,5);
+			var e = Math.pow(wanwei,5);
+			//判断
+			if(a + b + c + d + e == i) console.log(i);
+		}
+	</script>
+</body>
+</html>

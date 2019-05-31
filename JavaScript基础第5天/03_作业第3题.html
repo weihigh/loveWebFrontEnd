@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function rev(a){
+			var b = 0;	//每次调用这个函数的时候，b要重置为0
+			while(a){
+				b = b * 10 + a % 10;		//b自己乘以10然后加上a的末位数字
+				a = parseInt(a / 10);		//a自己变短一位数，去掉末位
+			}
+			return b;
+		}
+
+		alert(rev(89757));
+	</script>
+</body>
+</html>

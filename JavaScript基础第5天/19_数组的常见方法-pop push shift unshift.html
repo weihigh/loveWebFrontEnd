@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// push在数组最后添加项，可以添加多个项目
+		// var arr = ["东","西","南","北"];
+		// arr.push("中","发","白");		
+		// console.log(arr);
+		
+		//pop删除数组的最后一项，只能删除最后一项，无法删除多项。能够返回被删除的元素。
+		// var arr = ["东","西","南","北"];
+		// var last = arr.pop();		//删除数组的最后一项
+		// console.log(arr);
+		// console.log(last);		//pop能够有返回值
+
+		//unshift在数组开头插入项
+		// var arr = ["东","西","南","北"];
+		// arr.unshift("一万","八万","九万");
+		// console.log(arr);
+
+		//shift删除数组开头项
+		// var arr = ["东","西","南","北"];
+		// var first = arr.shift();
+		// console.log(arr);
+		// console.log(first);
+
+		//var arr = ["东","西","南","北"];
+		// arr.unshift(arr.pop());	//["北", "东", "西", "南"]
+		// console.log(arr);
+		// arr.unshift(arr.pop());	//["南", "北", "东", "西"]
+		// console.log(arr);
+		// arr.unshift(arr.pop()); //["西", "南", "北", "东"]
+		// console.log(arr);
+		// arr.unshift(arr.pop()); //["东", "西", "南", "北"]
+		// console.log(arr);
+		// arr.unshift(arr.pop()); //["北", "东", "西", "南"]
+		// console.log(arr);
+
+		var arr = ["东","西","南","北"];
+		arr.push(arr.shift());
+		console.log(arr);	//["西","南","北","东"]
+		arr.push(arr.shift());
+		console.log(arr);	//["南", "北", "东", "西"]
+		arr.push(arr.shift());
+		console.log(arr);	//["北", "东", "西", "南"]
+		arr.push(arr.shift());
+		console.log(arr);	//["东", "西", "南", "北"]
+		arr.push(arr.shift());
+		console.log(arr);	//["西", "南", "北", "东"]
+	</script>
+</body>
+</html>

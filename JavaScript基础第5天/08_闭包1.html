@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		// function outer(){
+		// 	var a = 888;
+		// 	function inner(){
+		// 		console.log(a);
+		// 	}
+		// }
+		// //在全局调用inner但是全局没有inner的定义，所以报错
+		// inner();
+
+		//**************************
+		//非常经典的闭包：
+		function outer(){
+			var a = 333;
+			function inner(){
+				console.log(a);
+			}
+			return inner;	//outer返回了inner的引用
+		}
+
+		var inn = outer();	//inn就是inner函数了
+		inn();			//执行inn，全局作用域下没有a的定义
+						//但是函数闭包，能够把定义函数的时候的作用域一起记忆住
+						//能够输出333
+
+
+	</script>
+</body>
+</html>

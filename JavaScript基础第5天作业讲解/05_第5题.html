@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		//方法1，数组法
+		// function rightchange(char,n){
+		// 	//转为数组
+		// 	var arr = char.split("");
+		// 	//循环执行右移
+		// 	for(var i = 1 ; i <= n ; i++){
+		// 		arr.unshift(arr.pop());
+		// 	}
+		// 	return arr.join("");
+		// }
+
+		function rightchange(char,n){
+			n = n % char.length;	//子串长度7，移动8位，等于移动1位
+			if(n == 0) return char;	//移动0位，就是返回原字符串	
+			return char.substr(-n) + char.substr(0,char.length - n);
+ 		}
+	</script>
+</body>
+</html>

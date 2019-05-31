@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var inner;	//inner天生就是全局的
+		function outer(){
+			var a = 250;
+			var b = 430;
+			//全局变量inner此时改变为了一个函数
+			//这个函数此时将立即生成闭包。记忆住了此时所处的环境，a是250
+			inner = function(){
+				alert(a);
+				alert(b);
+			}
+		}
+
+		outer();
+		var a = 300;
+		var b = 100;
+		inner();	//一个函数在执行的时候，找闭包里面的变量，不会理会当前作用域。
+	</script>
+</body>
+</html>

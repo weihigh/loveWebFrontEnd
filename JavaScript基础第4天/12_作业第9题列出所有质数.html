@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//从2~10000开始一个一个检测是不是质数
+		for(var i = 2 ; i <= 10000 ; i++){
+			//实验这个i是不是质数，需要看看这个i的约数的个数
+			var count = 0;	//每个i都要重新计算count
+			//从1到i，都让i去除，看看能不能整除，如果能整数，就是约数
+			//就要让约数个数加1
+			for(var j = 1 ; j <= i ; j++){
+				if(i % j == 0){
+					count++;	//约数个数加1
+				}
+			}
+			//出了这个for之后，就有i这个数字的约数个数了
+			if(count == 2) console.log(i);
+		}
+	</script>
+</body>
+</html>

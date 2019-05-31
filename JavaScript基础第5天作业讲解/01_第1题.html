@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//编写函数repeat(char,n) 实现重复char字符串n次
+		//方法1
+		// function repeat(char,n){
+		// 	var str = "";
+		// 	for(var i = 1 ; i <= n ; i++){
+		// 		str = str.concat(char);
+		// 	}
+		// 	return str;
+		// }
+
+
+		//方法2，二分法，“1248拆分法”
+		function repeat(char,n){
+			var str = "";
+			while(true){
+				if(n % 2 == 1){
+					//奇变偶不变
+					str += char;
+				}
+				//终点验证
+				if(n == 1 || n == 0){
+					break;
+				}
+				//改变n的值
+				n = parseInt(n / 2);
+				//每次循环，char都要倍增
+				char = char + char;
+			}
+			return str;
+		}
+	</script>
+</body>
+</html>

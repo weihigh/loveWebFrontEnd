@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// ***************更改一些项 ***************
+		// var arr = ["A","B","C","D","E","F","G"];
+		// arr.splice(3,2,"X","Y","Z","思密达");	
+		// console.log(arr);  //["A","B","C",3,2,"X","Y","Z","思密达","F","G"];
+
+		// ***************更改一些项 ***************
+		// var arr = ["A","B","C","D","E","F","G"];
+		// arr.splice(2,4,"哈哈");	
+		// console.log(arr);	//["A", "B", "哈哈", "G"]
+
+		// ***************更改一个项 ***************
+		// var arr = ["A","B","C","D","E","F","G"];
+		// arr.splice(2,1,"哈哈");
+		// console.log(arr);  //["A", "B", "哈哈", "D", "E", "F", "G"]
+
+		// ***************删除一些项 ***************
+		// var arr = ["A","B","C","D","E","F","G"];
+		// arr.splice(2,4);    //没有东西可以替换，就直接删除
+		// console.log(arr);   //["A", "B", "G"]
+
+		// ***************删除一些项 ***************
+		// var arr = ["A","B","C","D","E","F","G"];
+		// arr.splice(2);     //从下标为2的项开始，由于没有指定项的个数，所以就是接下来的全部
+		// 					//没有东西可以替换，就直接删除
+		// 					//从下标为2的项开始，删除所有
+		// console.log(arr);   //["A", "B"]
+
+
+		// ***************插入一些项 ***************
+		// var arr = ["A","B","C","D","E","F","G"];
+		// arr.splice(2,0,"嘻嘻","哈哈");		//插入到下标为2的项前
+		// console.log(arr);   //["A", "B", "嘻嘻", "哈哈", "C", "D", "E", "F", "G"]
+
+
+		var arr = ["A","B","C","D","E","F","G","H","I","J","K","L"];
+		arr.splice(-8);		 
+		console.log(arr);    
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//有10个学生的成绩存在数组中，请统计最高分，最低分，并将最高分和最低分学生的下标输出到控制台
+
+		var scoreArr = [6,45,23,56,76,89,34,23,65,23];
+
+		//最大值最小值
+		var max = 0;		//如果你这个成绩比max还大，那么你就成为max
+		var min = 100;		//如果你这个成绩比min还小，那么你就成为min
+
+		var maxindex = 0;	//最大数字的下标
+		var minindex = 0;	//最小数字的下标
+
+		//经典的找数组中最大值的方法
+		for(var i = 0 ; i < scoreArr.length ; i++){
+			//如果这个值比max还大，那么你就成为max
+			if(scoreArr[i] > max){
+				max = scoreArr[i];
+				maxindex = i;
+			}
+			//如果这个值比min还小，那么你就成为min
+			if(scoreArr[i] < min){
+				min = scoreArr[i];
+				minindex = i;
+			}
+		}
+
+		console.log("最大数" + max, "最小数" + min,"最大数下标" + maxindex,"最小数下标" + minindex);
+	</script>
+</body>
+</html>

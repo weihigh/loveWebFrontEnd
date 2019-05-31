@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		//第一步，用户输入数字
+		var a = parseInt(prompt("请输入三位数"));
+		//第二步，拆分位数
+		var gewei = a % 10;
+		var shiwei = parseInt(a / 10) % 10;
+		var baiwei = parseInt(a / 100);
+ 		//第三步，算综合
+ 		var sum = gewei + shiwei + baiwei;
+		//第四部，输出
+		alert("我已经计算了各个数位的和是" + sum);
+
+		//如果有的同学要和写，那么就要加括号：
+		//心中一定要有类型的概念，尤其是遇见+，更要有类型的概念！！
+		//alert("我已经计算了各个数位的和是" + (gewei + shiwei + baiwei));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	如果这一年是100的整数倍，就是年费以00结尾的，那么除以400，整除就是闰年，有余数不是闰年；
+	如果这一年不是100的整数倍，那么除以4，整除就是闰年，有余数不是闰年。
+	
+	<script type="text/javascript">
+		//第一步用户输入年份
+		var year = parseInt(prompt("请输入年份"));
+		//第二步盖楼
+		// if(year % 100 == 0){
+		// 	//是100的整数倍
+		// 	if(year % 400 == 0){
+		// 		alert("是闰年");
+		// 	}else{
+		// 		alert("不是闰年");
+		// 	}
+		// }else{
+		// 	//不是100的整数倍
+		// 	if(year % 4 == 0){
+		// 		alert("是闰年");
+		// 	}else{
+		// 		alert("不是闰年");
+		// 	}
+		// }
+
+		//方法2
+		//if(是100整数倍且能被400整除  ||  不是100整数倍且能被4整除)
+		// if(year % 100 == 0 && year % 400 == 0 || year % 100 != 0 && year % 4 == 0){
+		// 	alert("是闰年");
+		// }else{
+		// 	alert("不是闰年");
+		// }
+
+		//方法3
+		//就是方法2，利用了一个布尔运算的公式
+		// (a && b) || (a && c) 等价于 a && (b || c)
+		if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0)){
+			alert("是闰年");
+		}else{
+			alert("不是闰年");
+		}
+	</script>
+</body>
+</html>

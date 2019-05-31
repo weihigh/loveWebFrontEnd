@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//寻找3~100之内的所有质数
+		waiceng : 
+		for(var i = 3 ; i <= 100 ; i+=2{ //只有奇数才有可能是质数 
+			//我们要测试i是不是质数，之前我们的算法是测试i的约数个数（不包括1和自己）
+			//约数个数如果为0，那么就是质数。
+			//凭什么我要测试约数个数？？
+			//只要你有约数，你就不是质数！！！！
+			for(var j = 2 ; j <= Math.sqrt(i) ; j++){
+				if(i % j == 0){
+					continue waiceng;	//如果这数字，被某一个数字整除了，那么立即放弃他
+										//开始验证下一个i
+				}
+			}
+
+			console.log(i);	//如果一个数字有约数，就会执行continue，就遇不见这个语句了。
+		}
+	</script>
+</body>
+</html>

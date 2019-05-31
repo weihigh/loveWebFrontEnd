@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//用户输入一个数字，然后判断这个数字能否被5、6整除的情况
+		//第一步，用户输入一个数字
+		var a = parseInt(prompt("请输入一个整数"));
+		//第二步，判断
+		if(a % 5 == 0 && a % 6 == 0){
+			alert("这个数字同时能被5、6整除");
+		}else if(a % 5 != 0 && a % 6 ==0){
+			alert("这个数字能被6整除，但是不能被5整除");
+		}else if(a % 5 == 0 && a % 6 !=0){
+			alert("这个数字能被5整除，但是不能被6整除");
+		}else if(a % 5 != 0 && a % 6 !=0){
+			alert("这个数字不能被5、6整除");
+		}
+	</script>
+</body>
+</html>

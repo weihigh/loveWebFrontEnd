@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//让用户输入工作了几年，可以输入0，然后输入月薪。
+		var year = parseInt(prompt("请输入你工作了几年，不足1年写0，工作2年半，写2年"));
+		var salary = parseInt(prompt("请输入月薪"));
+		//系数，因为我们发现年终奖就是系数*月薪，  月薪是用户输入的吧，系数是我们判断出来的
+		var xishu;
+		//盖楼，这个楼计算出了系数
+		if(year == 0){
+			//工作0年的
+			if(salary > 8000){
+				xishu = 1.2;
+			}else{
+				xishu = 1.0;
+			}
+		}else if(year == 1){
+			//工作1年的
+			if(salary > 10000){
+				xishu = 1.7;
+			}else{
+				xishu = 1.5;
+			}
+		}else{
+			//工作2年的
+			if(salary > 12000){
+				xishu = 3.2;
+			}else{
+				xishu = 3;
+			}
+		}
+
+		alert(xishu * salary);
+	</script>
+</body>
+</html>

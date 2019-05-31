@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//方法1：就是for循环从最后一位开始取源字符串的字符，然后拼接到新的串中。
+		//function rev(char){
+		// 	var str = "";
+		// 	for(var i = char.length - 1 ; i >= 0 ; i--){
+		// 		str += char.charAt(i);
+		// 	}
+		// 	return str;
+		// }
+
+
+		//方法2
+		//字符串 →  数组      →   倒置        → 字符串
+		function rev(char){
+			//字符串 → 数组
+			var arr = char.split("");	//按字母拆开
+			//数组倒置
+			arr.reverse();
+			//拼接成为字符串
+			return arr.join("");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//阶乘接收一个参数a，返回a的阶乘
+		function multiple(a){
+			var s = 1;	//累乘器，每次执行函数的时候都要让s重置为1，
+						//所以放在函数里面
+			for(var i = a ; i >= 1 ; i--){
+				s *= i;
+			}
+			return s;
+		}
+
+
+		//计算1! + 2! + 3! + …… + 10!
+		var sum = 0;
+		for(var i = 1 ; i <= 10 ; i++){
+			sum += multiple(i);
+		}
+
+		console.log(sum);
+
+
+		// //找一个三位数，各个数位的阶乘和，等于自己
+		// for(var i = 100 ; i <= 999 ; i++){
+		// 	var gewei = i % 10;
+		// 	var shiwei = parseInt(i / 10) % 10;
+		// 	var baiwei = parseInt(i / 100);
+
+		// 	if(multiple(gewei) + multiple(shiwei) + multiple(baiwei) == i){
+		// 		console.log(i);
+		// 	}
+		// }
+	</script>
+</body>
+</html>

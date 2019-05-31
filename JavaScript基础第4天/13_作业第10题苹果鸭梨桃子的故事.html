@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 苹果3元一个，鸭梨2元一个，桃子1元一个。现在想用200元买100个水果，在控制台中列出所有可能性
+
+		// for(var x = 0 ; x <= 100 ; x++){
+		// 	for(var y = 0 ; y <= 100 ; y++){
+		// 		for(var z = 0 ; z <= 100 ; z++){
+		// 			//列出1000000中可能
+		// 			if(x + y + z == 100 && 3 * x + 2 * y + z == 200){
+		// 				console.log(x , y , z);
+		// 			}
+		// 		}
+		// 	}
+		// }
+
+		//简化一下
+		//苹果最多买到200/3 = 66个，如果真买66个苹果，只剩2元了
+		//所以就买不到100个水果。
+		//极限50 0 50
+		for(var x = 0 ; x <= 50 ; x++){
+			//苹果买了x只，所以鸭梨最多买100-x只
+			for(var y = 0 ; y <= 100 - x ; y++){
+				//桃子是没有自由度的，苹果数量定了、鸭梨数量定了
+				//桃子的数量就自动的有了
+				var z = 100 - x - y;	//x + y + z == 100
+				//此时x+y+z一定等于100
+				if(3 * x + 2 * y + z == 200){
+					console.log(x , y , z);
+				}
+			}
+		}
+	</script>
+</body>
+</html>

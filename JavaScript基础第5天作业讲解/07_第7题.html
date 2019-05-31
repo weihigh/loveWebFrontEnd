@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var scoreArr = [6,45,23,56,76,89,34,23,65,23];
+
+		//统计平均成绩，就要有总成绩
+		var sum = 0;
+		for(var i = 0 ; i <= scoreArr.length - 1 ; i++){
+			sum += scoreArr[i];
+		}
+
+		//平均成绩
+		var average = sum / scoreArr.length;
+
+		//大于等于平均成绩的人数
+		//又需要一个循环
+		var count = 0;
+		for(var i = 0; i <= scoreArr.length - 1 ; i++){
+			if(scoreArr[i] >= average){
+				count++;
+			}
+		}
+
+		alert("大于等于平均成绩的人数" + count);
+	</script>
+</body>
+</html>

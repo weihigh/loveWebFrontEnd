@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//用户输入成绩，判断优秀、良好、及格、不及格
+		var score = parseInt(prompt("请输入成绩"));
+
+		//下面的方法是对的，但是我们不建议大家这么写
+		//比较范围，而不是相等的比较，所以用if……else……
+		switch(true){
+			case score < 60 :
+				alert("不及格");
+				break;
+			case score < 75 :
+				alert("及格");
+				break;
+			case score < 85 :
+				alert("良好");
+				break;
+			case score <= 100 :
+				alert("优秀");
+				break;
+			default :
+				alert("你输入的成绩错误");
+		}
+
+		//盖楼
+		// 不对的：
+		// switch(score){
+		// 	case 0 < score && score < 60:
+		// 		alert("不及格");
+		// 		break;
+		// 	case 60 < score && score < 100:
+		// 		alert("及格");
+		// 		break;
+		// 	default :
+		// 		alert("我是默认");
+		// 		break;
+		// }
+	</script>
+</body>
+</html>

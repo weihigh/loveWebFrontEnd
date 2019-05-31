@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//穷举法
+		for(var i = 100 ; i <= 999 ; i++){
+			//拆分位
+			var gewei = i % 10;
+			var shiwei = parseInt(i / 10) % 10;
+			var baiwei = parseInt(i / 100);
+			//判断
+			if(Math.pow(gewei,3) + Math.pow(shiwei,3) + Math.pow(baiwei,3) == i){
+				console.log(i);
+			}
+		}
+	</script>
+</body>
+</html>

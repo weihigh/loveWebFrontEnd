@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		//从1开始~10000实验
+		for(var i = 1 ; i <= 10000 ; i++){
+			//每个i都要有自己全新全新的sum，sum要重置为0
+			var sum = 0;
+			//测试这个i是不是完美数，
+			//所以要算i的约数和，比如48是不是完美数，那么就要把
+			//所有的约数相加，但是不包括48自己。
+			for(var j = 1 ;  j < i ; j++){
+				if(i % j == 0){ 
+					//j是i的约数
+					sum = sum + j;   //约数累加
+				}
+			}
+			//上面这个for循环做完之后，我们已经有了一个成果:sum
+			// 完美数定义，所有约数和等于自己
+			if(sum == i){
+				console.log(i);
+			}
+		}
+	</script>
+</body>
+</html>

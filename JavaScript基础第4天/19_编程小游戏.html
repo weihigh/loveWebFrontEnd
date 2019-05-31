@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//程序一开始就要随机生成一个地雷数
+		//地雷就是2~99
+		var dilei = parseInt(Math.random() * 100) + 1;
+		//下限和上限：
+		var xiaxian = 1;
+		var shangxian = 100;
+
+		//现在要让用户输入数字了，死循环，一直输入，直到踩雷
+		while(true){
+			var a = parseInt(prompt("请输入数字，范围" + xiaxian + "到" + shangxian));
+			//验证有效性
+			if(a > xiaxian && a < shangxian){
+				//根据用户输入的数字，来调整上限和下限。
+				//如果用户输入的数字大于地雷，改变上限；反之就是下限。如果刚好是地雷，就爆炸
+				if(a > dilei){
+					shangxian = a;
+				}else if(a < dilei){
+					xiaxian = a;
+				}else if(a == dilei){
+					alert("你中奖了！！踩地雷了！！兄弟啊！！买棒棒糖啊！！");
+					break;
+				}
+			}
+			else{
+				alert("输入的数字不在范围内，请重新输入");
+			}
+		}
+	</script>
+</body>
+</html>

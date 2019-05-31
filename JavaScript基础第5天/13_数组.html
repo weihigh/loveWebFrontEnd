@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// var arr = [16,33,23,12,53];
+		// console.log(arr[2]);	//读取下标为2的项
+		
+		// arr[3] = 88;			//设置数组的某一项
+		// console.log(arr);		//输出全部数组
+
+		//***************
+		// 数组中并不规定保存相同类型的项
+		// var arr = [1,"哈哈",true,undefined,"么么哒"];
+		// console.log(arr[2]);
+
+		//甚至可以把函数放在数组里面
+		function fn(){
+			alert("你好");
+		}
+
+		var arr = [3,4,fn,"么么哒",12];
+		arr[2]();	//数组下标为2的项，是一个函数，是函数就能运行
+	</script>
+</body>
+</html>

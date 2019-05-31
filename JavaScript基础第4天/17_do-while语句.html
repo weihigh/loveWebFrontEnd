@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// var i = 1;
+		// do{
+		// 	console.log(i);
+		// 	i++;
+		// }while(i <= 100)
+
+
+		//这是一个后置验证的语句，也就是说会输出一次，肯定会至少输出一次
+		// do{
+		// 	console.log("哈哈");
+		// }while(false)
+
+
+		//死循环
+		// do{
+		// 	alert("么么哒");
+		// 	alert("呵呵");
+		// 	alert("我爱你");
+		// 	alert("呵呵");
+		// }while(true);
+
+		
+		//让用户输入一个数，直到他输入10停止
+		do{
+			var a = prompt("你到底爱不爱我？");
+			if(a == "爱"){
+				alert("我也爱你");
+				break;
+			}else{
+				alert("回答错误，请重新输入");
+			}
+		}while(true);
+	</script>
+</body>
+</html>

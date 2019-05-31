@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// for(var i = 1 ; i <= 100; i++){
+		// 	console.log(i);
+		// 	if(i == 5){
+		// 		break; 		//找到了一个，就立即终止循环
+		// 	}
+		// }
+
+
+		// //break只中断了最内层循环，外层循环还在继续
+		// for(var i = 1 ; i <= 10 ; i++){
+		// 	for(var j = 1 ; j <= 10 ; j++){
+		// 		console.log(i,j);
+		// 		if(j == 5){
+		// 			break;
+		// 		}
+		// 	}
+		// }
+
+
+		//break只能终止内层循环，但是我们就是想要终止外层循环
+		//就要给外层循环加label：
+		waiceng : for(var i = 1 ; i <= 10 ; i++){
+			for(var j = 1 ; j <= 10 ; j++){
+				console.log(i,j);
+				if(j == 5){
+					break waiceng;		//break label的语法
+				}
+			}
+		}
+	</script>
+</body>
+</html>
