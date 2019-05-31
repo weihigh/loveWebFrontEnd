@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.carousel{
+			width: 310px;
+			height: 220px;
+			border: 1px solid gray;
+			margin: 100px auto;
+			/*子绝父相*/
+			position:relative;
+		}
+		span.left_btn{
+			/*只要一个元素脱标了，就不分行、块了。所以span能设置宽高。*/
+			position: absolute;
+			background:url(images/icon_v9.png) no-repeat 0 0;
+			width: 30px;
+			height: 35px;
+			top: 50%;
+			left: 10px;
+			margin-top: -17px;
+			/*鼠标指针的属性*/
+			cursor:pointer;
+		}
+		span.right_btn{
+			/*只要一个元素脱标了，就不分行、块了。所以span能设置宽高。*/
+			position: absolute;
+			background:url(images/icon_v9.png) no-repeat 0 -44px;
+			width: 30px;
+			height: 35px;
+			top: 50%;
+			right: 10px;
+			margin-top: -17px;
+			/*鼠标指针的属性*/
+			cursor:pointer;
+		}
+		.carousel p{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			color:white;
+			/*p是会计元素没错，但是脱标了，所以没有自动撑满这个性质了*/
+			/*所以要写width:100%;*/
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<!-- carousel就是轮播图的意思，“旋转木马” -->
+	<div class="carousel">
+		<img src="images/bidong.jpg" alt="" />
+		<span class="left_btn"></span>
+		<span class="right_btn"></span>
+		<p>花样秀性感!美女劈腿壁咚秀逆天好身材</p>
+	</div>
+</body>
+</html>

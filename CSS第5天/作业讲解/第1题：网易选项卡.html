@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.tab{
+			margin: 100px auto;
+			width: 310px;
+			border-top: 2px solid #206F96;
+		}
+		.tab .hd{
+			overflow: hidden;
+		}
+		.tab .hd span{
+			float: left;
+			width: 102px;
+			line-height: 29px;
+			border-left: 1px solid #CFCFCF;
+			border-bottom: 1px solid #CFCFCF;
+			background-color: #EFEFEF;
+			text-align: center;
+			font-size: 14px;
+			font-family: "SimSun";
+		}
+		.tab .hd span.last{
+			border-right: 1px solid #CFCFCF;
+		}
+		.tab .hd span.current{
+			border-bottom-color:white;
+			background-color: white;
+			font-weight: bold;
+		}
+		.tab .hd span a{
+			color:#252525;
+			text-decoration: none;
+		}
+		/*用户触摸链接的时候的样式*/
+		.tab .hd span a:hover{
+			color:#a00;
+			text-decoration: underline;
+		}
+		.tab .bd{
+			padding-top: 15px;
+			padding-left: 8px;
+		}
+		.tab .bd ul{
+			list-style: none;
+		}
+		.tab .bd ul li{
+			font: 14px/27px "SimSun";
+		}
+		.tab .bd ul li a{
+			text-decoration: none;
+			color:#252525;
+		}
+		.tab .bd ul li.headline a{
+			font-weight: bold;
+		}
+		.tab .bd ul li a:hover{
+			text-decoration: underline;
+			color:#a00;
+		}
+	</style>
+</head>
+<body>
+	<div class="tab">
+		<div class="hd">
+			<span class="current">
+				<a href="">新闻</a>
+			</span>
+			<span>
+				<a href="">图片</a>
+			</span>
+			<span class="last">
+				<a href="">军事</a>
+				<a href="">航空</a>
+			</span>
+		</div>
+		<div class="bd">
+			<ul>
+				<li>
+					<a href="">习近平与捷克总统泽曼会晤 共种银杏树苗</a>
+				</li>
+				<li class="headline">
+					<a href="">习近平访问捷克 两战机护航</a> 
+					<a href="">出访专题</a> 
+					<a href="">这三年</a>
+				</li>
+				<li><a href="">
+					<a href="">李克强:政府带头过紧日子</a> 
+					<a href="">公布社保基金条例</a>
+				</li>
+				<li>
+					<a href="">社保基金条例发布</a>
+					<a href="">基金年均投资收益率8.82％</a></li>
+				<li>
+					<a href="">近期省级大员密集调整:十余省份党委班子变动</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

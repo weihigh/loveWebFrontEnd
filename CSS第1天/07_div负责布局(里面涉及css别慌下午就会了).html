@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>div负责布局</title>
+	<style type="text/css">
+		.header{
+			width: 1000px;
+			height: 100px;
+			margin: 0 auto;
+ 
+		}
+		.content{
+			width: 1000px;
+			height: 400px;
+			margin: 10px auto;
+			background-color: pink;
+		}
+		.footer{
+			width: 1000px;
+			height: 100px;
+			margin: 0 auto;
+			background-color: skyblue;
+		}
+		.logo{
+			float: left;
+			position: absolute;
+			width: 220px;
+			height: 100px;
+			background-color: red;
+		}
+		.nav{
+			float: right;
+			width: 700px;
+			height: 60px;
+			background-color: blue;
+			position: relative;
+			top: 40px;
+		}
+		.ad{
+			float: left;
+			width: 200px;
+			height: 400px;
+			background-color: yellow;
+		}
+		.main{
+			float: right;
+			margin-left: 10px;
+			background-color: yellow;
+			height: 400px;
+			width: 760px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="logo" id="logo">
+			我是网页的logo
+		</div>
+		<div class="nav">
+			我是导航条
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="ad"></div>
+		<div class="main">
+			<div class="c1"></div>
+			<div class="c2"></div>
+			<div class="c3"></div>
+		</div>
+	</div>
+
+	<div class="footer">
+		网页的底部
+	</div>
+
+	<script type="text/javascript">
+		var logo = document.getElementById("logo");
+		var a= 200;
+		setInterval(function(){
+			a++;
+			logo.style.left = a + "px";
+		}, 30);
+	</script>
+</body>
+</html>
