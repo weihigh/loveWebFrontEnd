@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小小调查</title>
+	<link rel="stylesheet" href="css/boot.css">
+	<style type="text/css">
+		h1{
+			text-align: center;
+		}
+		.q{
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-lg-offset-3">
+				<h1>双十一小调查问卷</h1>
+				<hr>
+
+				<div class="q">
+					<h4>双十一你最期待的事情</h4>
+					<p>
+						<label>
+							<input type="radio" name="timu1" value="A"/>
+							商场打折
+						</label>
+					</p>
+					<p>
+						<label>
+							<input type="radio" name="timu1" value="B"/>
+							淘宝购物节
+						</label>
+					</p>
+					<p>
+						<label>
+							<input type="radio" name="timu1" value="C"/>
+							单身狗过节啦
+						</label>
+					</p>
+				</div>
+
+				<div class="q">
+					<h4>双十一你想买的东西</h4>
+				 
+						<label>
+							<input type="checkbox" name="timu2" value="A"/>
+							零食
+						</label>
+					 
+						<label>
+							<input type="checkbox" name="timu2" value="B"/>
+							衣服
+						</label>
+				 
+						<label>
+							<input type="checkbox" name="timu2" value="C"/>
+							电子产品
+						</label>
+				 
+						<label>
+							<input type="checkbox" name="timu2" value="D"/>
+							美容产品
+						</label>
+					 
+				</div>
+
+				<div class="q">
+					<h4>双十一你的预算</h4>
+				 	<input name="timu3" type="range" min="100" max="20000" step="100" value="100" class="form-control">
+				 	<b>100</b> 
+				</div>
+
+				<button id="submitbtn" class="btn btn-success">提交</button>
+
+				<a href="jieguo.html">查看结果</a>
+			</div>
+
+
+		</div>
+	</div>
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<script type="text/javascript">
+		//滚动条的拖拽事件
+		$("input[name=timu3]").bind("input" , function(){
+			$(this).next("b").html($(this).val());
+		});
+
+		$("#submitbtn").click(function(){
+			$.post({
+				//这里是为了避免产生timu2[]
+				//如果要ajax提交数组，这里必须写上traditional:true
+				"traditional" : true,	
+				"url" : "/tijiao" , 
+				"data" : {
+					"timu1" : $("input[name=timu1]:checked").val() ,
+					"timu2" : (function(){
+						var arr = [];
+						$("input[name=timu2]:checked").each(function(){
+							arr.push($(this).val());
+						});
+						return arr;
+					})(),
+					"timu3" : $("input[name=timu3]").val()
+				}
+			})
+		});
+	</script>
+</body>
+</html>

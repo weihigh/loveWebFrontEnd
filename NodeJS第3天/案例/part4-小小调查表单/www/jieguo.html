@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>结果页面</title>
+	<script type="text/javascript" src="lib/echarts.min.js"></script>
+</head>
+<body>
+	<div id="timu1canvas" style="width: 600px;height:400px;"></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="timu2canvas" style="width: 600px;height:400px;"></div>
+
+
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<script type="text/javascript">
+		$.get("/jieguo/1" , function(data){
+			 // 基于准备好的dom，初始化echarts实例
+	        var timu1canvas = echarts.init(document.getElementById('timu1canvas'));
+	        // 使用刚指定的配置项和数据显示图表。
+	        timu1canvas.setOption({
+			    title : {
+			        text: '题目1 ： 双十一你最期待的事情',
+			        x:'center'
+			    },
+			    tooltip : {
+			        trigger: 'item',
+			        formatter: "{a} <br/>{b} : {c} ({d}%)"
+			    },
+			    legend: {
+			        x : 'center',
+			        y : 'bottom',
+			        data:['商场打折','淘宝购物节','单身狗过节啦']
+			    },
+			    calculable : true,
+			    series : [
+			        {
+			            name:'双十一你最期待的事情',
+			            type:'pie',
+			            radius : [30, 110],
+			            center : ['50%', '50%'],
+			          
+			            itemStyle: {
+			                emphasis: {
+			                    shadowBlur: 10,
+			                    shadowOffsetX: 0,
+			                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+			                }
+			            },
+			            data:[
+			                {value:data.A, name:'商场打折'},
+			                {value:data.B, name:'淘宝购物节'},
+			                {value:data.C, name:'单身狗过节啦'}
+			            ]
+			            // color : ["darkred","navy","greenyellow"]
+			        }
+			    ]
+			});
+		});
+
+
+		$.get("/jieguo/2" , function(data){
+			 // 基于准备好的dom，初始化echarts实例
+	        var timu2canvas = echarts.init(document.getElementById('timu2canvas'));
+	        // 使用刚指定的配置项和数据显示图表。
+	        timu2canvas.setOption({
+	        	 title : {
+			        text: '题目2 ： 双十一你想买的东西',
+			        x:'center'
+			    },
+			    color: ['#3398DB'],
+			    tooltip : {
+			        trigger: 'axis',
+			        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+			            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+			        }
+			    },
+			    grid: {
+			        left: '3%',
+			        right: '4%',
+			        bottom: '3%',
+			        containLabel: true
+			    },
+			    xAxis : [
+			        {
+			            type : 'category',
+			            data : ['零食', '衣服', '电子产品', '美容产品'],
+			            axisTick: {
+			                alignWithLabel: true
+			            }
+			        }
+			    ],
+			    yAxis : [
+			        {
+			            type : 'value'
+			        }
+			    ],
+			    series : [
+			        {
+			            name:'双十一你想买的东西',
+			            type:'bar',
+			            barWidth: '60%',
+			            data:[data.A,data.B,data.C,data.D]
+			        }
+			    ]
+			});
+		});
+       
+    </script>
+</body>
+</html>
