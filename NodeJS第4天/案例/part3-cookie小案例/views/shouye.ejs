@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>考拉窝</title>
+</head>
+<body>
+	<div>
+		请查看攻略：
+		<a href="/广州">广州攻略</a>
+		<a href="/北京">北京攻略</a>
+		<a href="/上海">上海攻略</a>
+		<a href="/郑州">郑州攻略</a>
+		<a href="/沈阳">沈阳攻略</a>
+		<a href="/重庆">重庆攻略</a>
+		<a href="/长沙">长沙攻略</a>
+		<a href="/武汉">武汉攻略</a>
+		<a href="/深圳">深圳攻略</a>
+	</div>
+	<br>
+	<br>
+	<div>
+		你曾经浏览过：
+		<% for(var i = 0 ; i < lishijilu.length ; i++){ %>
+			<b><a href="/<%= lishijilu[i] %>"><%= lishijilu[i] %></a></b>
+		<% } %>
+	</div>
+</body>
+</html>

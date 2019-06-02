@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>考拉小网站</title>
+</head>
+<body>
+	<div>
+		<h1>考拉小网站</h1>
+		<% if(!login){ %>
+			<form action="/login" method="post">
+				<p>
+					用户名：
+					<input type="text" name="yonghuming">
+				</p>
+				<p>
+					我暗恋的人：
+					<input type="text" name="anlian">
+				</p>
+				<p>
+					<input type="submit">
+				</p>
+			</form>
+		<% }else{ %>
+			<div>
+				<h1>欢迎你<%= yonghuming %> ！ 你已经成功登录！</h1>
+				<h1>你暗恋的人是<%= anlian %></h1>
+			</div>
+		<% } %>
+	</div>
+</body>
+</html>

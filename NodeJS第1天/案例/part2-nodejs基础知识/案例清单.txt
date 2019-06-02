@@ -1,0 +1,9 @@
+﻿01:这是一个简单的js程序，这个文件可以被nodejs运行。直接node 01.js即可。说明js有了新的宿主环境：nodejs平台。
+
+02:最简单的服务器demo。
+
+03:实现了带有路由的外置页面的小网站。浏览/mingxing/wjk，或者浏览/shuaige/lh
+
+04：实现了类似知乎的路由，我们用正则表达式抓取的关键字。浏览/user/luhan/ask，或者/user/luhan/post
+
+

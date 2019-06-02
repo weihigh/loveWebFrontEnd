@@ -1,0 +1,22 @@
+{
+  "name": "day1",
+  "version": "0.0.1",
+  "description": "这是考拉老师的一个案例",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "考拉",
+    "牛逼",
+    "爱前端"
+  ],
+  "author": "考拉",
+  "license": "MIT",
+  "dependencies": {
+    "node-xlsx": "^0.11.0",
+    "nzh": "^1.0.1",
+    "pinyin": "^2.8.3",
+    "solarlunar": "^2.0.1"
+  }
+}
