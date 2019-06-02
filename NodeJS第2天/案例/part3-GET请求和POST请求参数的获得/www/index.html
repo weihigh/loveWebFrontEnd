@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+</head>
+<body>
+	<h1>我是首页</h1>
+	<p><button id="btn1">按我发出GET请求 - 希望服务器按需给我一些数据</button></p>
+	<p><button id="btn2">按我发出POST请求 - 推给服务器一些数据</button></p>
+	<p><button id="btn3">按我发出DELETE请求 - 希望服务器删除东西</button></p>
+	<p><button id="btn4">按我发出CHECKOUT请求 - 希望服务器验证某东西</button></p>
+	<p><button id="btn5">按我发出PATCH请求 - 希望服务器修改现存的一些数据</button></p>
+
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<script type="text/javascript">
+		//点击这个按钮发出GET请求
+		$("#btn1").click(function(){
+			$.get("/tijiao", 
+				{
+					"name":"小明",
+					"age":12,
+					"sex":"男"
+				}, 
+				function(data){
+					alert(data.result);
+				}
+			);
+		});
+
+		//点击这个按钮发出POST请求
+		$("#btn2").click(function(){
+			$.post("/tijiao", 
+				{
+					"name":"小明",
+					"age":12,
+					"sex":"男"
+				}, 
+				function(data){
+					alert(data.result);
+				}
+			);
+		});
+
+		//点击这个按钮发出DELETE请求
+		$("#btn3").click(function(){
+			$.ajax({
+				"url" : "/tijiao" ,
+				"type" : "DELETE" ,
+				"data" : {
+					"id" : 10086
+				},
+				"success" : function(data){
+					alert(data.result);
+				}
+			});
+		});
+
+		//点击这个按钮发出CHECKOUT请求
+		$("#btn4").click(function(){
+			$.ajax({
+				"url" : "/tijiao" ,
+				"type" : "CHECKOUT" ,
+				"data" : {
+					"id" : 10086
+				},
+				"success" : function(data){
+					alert(data.result);
+				}
+			});
+		});
+
+		//点击这个按钮发出PATCH请求
+		$("#btn5").click(function(){
+			$.ajax({
+				"url" : "/tijiao" ,
+				"type" : "PATCH" ,
+				"data" : {
+					"id" : 10086 ,
+					"sex" : "女"
+				},
+				"success" : function(data){
+					alert(data.result);
+				}
+			});
+		});
+	</script>
+</body>
+</html>

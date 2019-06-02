@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function shuihu(callback){
+			setTimeout(function(){
+				var wendu = Math.random() * 100;
+				callback(wendu);
+			},1000);
+		}
+
+		shuihu(function(wendu){
+			if(wendu > 60){
+				console.log("喝")
+			}else{
+				console.log("不和")
+			}
+		});
+	</script>
+</body>
+</html>

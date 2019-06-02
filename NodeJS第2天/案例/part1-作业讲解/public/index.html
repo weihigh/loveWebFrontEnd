@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>考拉小小工具箱</title>
+	<style type="text/css">
+		.box{
+			border-top: 1px solid #eee;
+		}
+		.wrap{
+			width:800px;
+			margin:0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<h1>考拉小小工具箱</h1>
+		<div class="box">
+			<h3>钱大小写转换工具</h3>
+			<p>
+				<input type="text" id="txt1">
+				<button id="btn1">转换</button>
+			</p>
+		</div>
+		<div class="box">
+			<h3>日期转换农历工具</h3>
+			<p>
+				<input type="date" id="odate">
+				<button id="btn2">转换</button>
+			</p>
+		</div>
+		<div class="box">
+			<h3>拼音转换工具</h3>
+			<p>
+				<input type="text" id="txt3">
+				<button id="btn3">转换</button>
+			</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var btn1 = document.getElementById("btn1");
+		var txt1 = document.getElementById("txt1");
+
+		var btn2 = document.getElementById("btn2");
+		var odate = document.getElementById("odate");
+
+		var btn3 = document.getElementById("btn3");
+		var txt3 = document.getElementById("txt3");
+
+		btn1.onclick = function(){
+			var qian = txt1.value;
+			window.location = "/qian/" + qian;
+		}
+
+		btn2.onclick = function(){
+			var riqi = odate.value;
+			window.location = "/riqi/" + riqi.replace(/\-/g,"/");
+		}
+
+		btn3.onclick = function(){
+			var word = txt3.value;
+			window.location = "/pinyin/" + word;
+		}
+	</script>
+</body>
+</html>
