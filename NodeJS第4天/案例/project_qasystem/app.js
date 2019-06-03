@@ -14,7 +14,7 @@ var app = express();
 app.set("view engine" , "ejs");
 
 //数据库
-mongoose.connect("mongodb://localhost/qasystem");
+mongoose.connect("mongodb://localhost/qasystem",{useMongoClient:true});
 
 //使用session，这里的语句照抄，不要求懂：
 app.set('trust proxy', 1);
