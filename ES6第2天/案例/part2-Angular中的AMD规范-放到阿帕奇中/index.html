@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div ng-controller="MainCtrl as mainctrl">
+		<h1>{{mainctrl.a}}</h1>
+		<input type="range" min=0 max=200 ng-model="mainctrl.a">
+		<button ng-click="mainctrl.add()">加</button>
+		<button ng-click="mainctrl.minus()">减</button>
+		<button ng-click="mainctrl.pf()">平方</button>
+	</div>
+
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript">
+		var myapp = angular.module("myapp" , []);
+
+		myapp.controller("MainCtrl",["shuxue",function(shuxue){
+			this.a = 100;
+
+			var self = this;
+			this.add = function(){
+				self.a++;
+			}
+
+			this.minus = function(){
+				self.a--;
+			}
+
+			this.pf = function(){
+				self.a = shuxue.pingfang(self.a);
+			}
+		}]);
+
+		myapp.factory("shuxue",[function(){
+			function pingfang(a){
+				return a * a;
+			}
+			return {
+				pingfang
+			}
+		}]);
+	</script>
+</body>
+</html>
