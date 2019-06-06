@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		li{
+			float: left;
+			width:100px;
+			height:100px;
+			margin-right: 10px;
+			background-color: #eee;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	
+	<script type="text/javascript">
+		function $(selector){
+			//兼容到IE9+（含）
+			return new JQueryObject(document.querySelectorAll(selector));
+		}
+
+		function JQueryObject(objectsArr){
+			for(var i = 0 ; i < objectsArr.length ; i++){
+				this[i] = objectsArr[i];
+			}
+			//类数组对象别忘了补充一个length属性
+			this.length = objectsArr.length;
+		}
+		JQueryObject.prototype.css = function(k , v){
+			for(var i = 0 ; i < this.length ; i++){
+				this[i].style[k] = v;
+			}
+		}
+		JQueryObject.prototype.addClass = function(c){
+			for(var i = 0 ; i < this.length ; i++){
+				this[i].className += " " + c;
+			}
+		}
+		JQueryObject.prototype.eq = function(idx){
+			console.log(this[idx]);
+			return new JQueryObject([this[idx]]);
+		}
+
+		var $lis = $("#box ul li");
+		$lis.css("background" , "blue");
+		$lis.addClass("haha");
+		$lis.eq(2).css("background" , "green");
+	</script>
+</body>
+</html>
