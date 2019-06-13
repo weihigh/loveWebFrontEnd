@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        td{
+            border:1px solid olivedrab;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="app-container">
+        <table>
+            <tr v-for="i in 9">
+                <td v-for="j in 9" v-show="j <= i">{{i}} * {{j}} = {{i * j}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="vue.min.js"></script>
+    <script>
+        new Vue({
+            el : "#app-container" 
+        });
+    </script>
+</body>
+</html>
